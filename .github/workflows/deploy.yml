@@ -1,0 +1,39 @@
+name: Build and Deploy to Deploy Branch
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow when pushing to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16 # Adjust to your project's required Node.js version
+
+      # Step 3: Install dependencies and build
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build # Adjust the build command to match your project
+
+      # Step 4: Deploy to Deploy Branch
+      - name: Deploy to deploy branch
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git checkout deploy || git checkout -b deploy
+          rm -rf * # Clean up old files
+          cp -R dist/* . # Copy build files (adjust if your build directory is different)
+          git add .
+          git commit -m "Deploy from main branch: ${{ github.sha }}"
+          git push origin deploy --force
