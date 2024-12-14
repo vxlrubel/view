@@ -8,6 +8,7 @@ import SupportIcon from './icons/IconSupport.vue'
 </script>
 
 <template>
+  <div class="animatio-fadein">
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
@@ -87,4 +88,5 @@ import SupportIcon from './icons/IconSupport.vue'
     us by
     <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
   </WelcomeItem>
+</div>
 </template>
