@@ -1,0 +1,99 @@
+{
+    "seoServices": [
+      {
+        "id": 1,
+        "service": "On-Page SEO Optimization",
+        "imageUrl": "https://example.com/images/on-page-seo.jpg",
+        "details": [
+          {
+            "id": 101,
+            "title": "Keyword research and implementation",
+            "image": "https://example.com/images/keyword-research.jpg",
+            "description": "Identify and implement high-impact keywords to improve search rankings."
+          },
+          {
+            "id": 102,
+            "title": "Meta tags and content optimization",
+            "image": "https://example.com/images/meta-tags.jpg",
+            "description": "Optimize meta tags and content for better visibility and relevance."
+          },
+          {
+            "id": 103,
+            "title": "Image optimization",
+            "image": "https://example.com/images/image-optimization.jpg",
+            "description": "Ensure images are optimized for faster load times and better SEO."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "service": "Technical SEO",
+        "imageUrl": "https://example.com/images/technical-seo.jpg",
+        "details": [
+          {
+            "id": 201,
+            "title": "Website speed optimization",
+            "image": "https://example.com/images/speed-optimization.jpg",
+            "description": "Improve website load times to enhance user experience and search rankings."
+          },
+          {
+            "id": 202,
+            "title": "Mobile optimization",
+            "image": "https://example.com/images/mobile-optimization.jpg",
+            "description": "Optimize websites for mobile devices to ensure responsiveness and usability."
+          },
+          {
+            "id": 203,
+            "title": "Structured data and schema markup",
+            "image": "https://example.com/images/schema-markup.jpg",
+            "description": "Implement structured data to improve search engine understanding of your site."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "service": "Off-Page SEO",
+        "imageUrl": "https://example.com/images/off-page-seo.jpg",
+        "details": [
+          {
+            "id": 301,
+            "title": "Link building",
+            "image": "https://example.com/images/link-building.jpg",
+            "description": "Build high-quality backlinks to improve domain authority."
+          },
+          {
+            "id": 302,
+            "title": "Local SEO",
+            "image": "https://example.com/images/local-seo.jpg",
+            "description": "Optimize for local searches to attract nearby customers."
+          },
+          {
+            "id": 303,
+            "title": "Social media integration",
+            "image": "https://example.com/images/social-media.jpg",
+            "description": "Integrate social media platforms to enhance online presence."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "service": "SEO Audits and Reports",
+        "imageUrl": "https://example.com/images/seo-audits.jpg",
+        "details": [
+          {
+            "id": 401,
+            "title": "Comprehensive SEO analysis",
+            "image": "https://example.com/images/seo-analysis.jpg",
+            "description": "Conduct detailed analysis to identify SEO opportunities and challenges."
+          },
+          {
+            "id": 402,
+            "title": "Recommendations for improvement",
+            "image": "https://example.com/images/seo-recommendations.jpg",
+            "description": "Provide actionable recommendations to enhance search performance."
+          }
+        ]
+      }
+    ]
+  }
+  

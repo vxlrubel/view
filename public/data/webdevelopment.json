@@ -1,0 +1,105 @@
+{
+    "webDevelopmentServices": [
+      {
+        "id": 1,
+        "service": "Custom WordPress Development",
+        "imageUrl": "https://example.com/images/custom-wordpress-development.jpg",
+        "details": [
+          {
+            "id": 101,
+            "title": "Theme customization and development",
+            "image": "https://example.com/images/theme-customization.jpg",
+            "description": "Customize and develop themes to meet client requirements."
+          },
+          {
+            "id": 102,
+            "title": "Plugin development",
+            "image": "https://example.com/images/plugin-development.jpg",
+            "description": "Create custom plugins to extend WordPress functionality."
+          },
+          {
+            "id": 103,
+            "title": "WooCommerce setup and customization",
+            "image": "https://example.com/images/woocommerce-setup.jpg",
+            "description": "Set up and customize WooCommerce for e-commerce websites."
+          },
+          {
+            "id": 104,
+            "title": "WordPress security and performance optimization",
+            "image": "https://example.com/images/security-performance.jpg",
+            "description": "Ensure website security and optimize performance."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "service": "Laravel Development",
+        "imageUrl": "https://example.com/images/laravel-development.jpg",
+        "details": [
+          {
+            "id": 201,
+            "title": "Custom web application development",
+            "image": "https://example.com/images/custom-web-app.jpg",
+            "description": "Develop bespoke web applications using Laravel."
+          },
+          {
+            "id": 202,
+            "title": "API development and integration",
+            "image": "https://example.com/images/api-development.jpg",
+            "description": "Design and integrate APIs for seamless functionality."
+          },
+          {
+            "id": 203,
+            "title": "Maintenance and support",
+            "image": "https://example.com/images/maintenance-support.jpg",
+            "description": "Provide ongoing maintenance and technical support."
+          },
+          {
+            "id": 204,
+            "title": "Database design and optimization",
+            "image": "https://example.com/images/database-optimization.jpg",
+            "description": "Design and optimize databases for performance and scalability."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "service": "Headless CMS Solutions",
+        "imageUrl": "https://example.com/images/headless-cms-solutions.jpg",
+        "details": [
+          {
+            "id": 301,
+            "title": "WordPress with Vue.js (headless WordPress)",
+            "image": "https://example.com/images/headless-wordpress.jpg",
+            "description": "Develop headless CMS solutions using WordPress and Vue.js."
+          },
+          {
+            "id": 302,
+            "title": "API-driven front-end development",
+            "image": "https://example.com/images/api-driven-front-end.jpg",
+            "description": "Build front-end applications powered by APIs."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "service": "Full-Stack Web Development",
+        "imageUrl": "https://example.com/images/full-stack-web-development.jpg",
+        "details": [
+          {
+            "id": 401,
+            "title": "End-to-end project delivery (front-end + back-end)",
+            "image": "https://example.com/images/end-to-end-project.jpg",
+            "description": "Deliver complete web solutions covering both front-end and back-end."
+          },
+          {
+            "id": 402,
+            "title": "Progressive web applications (PWAs)",
+            "image": "https://example.com/images/pwas.jpg",
+            "description": "Develop robust and responsive progressive web applications."
+          }
+        ]
+      }
+    ]
+  }
+  
