@@ -1,6 +1,7 @@
 :root {
   --vt-c-white: #ffffff;
   --vt-c-black: #181818;
+  --header-height: 3.125rem;
 }
 
 :root {
@@ -13,14 +14,6 @@
     --color-background: var(--vt-c-black);
     --color-text: var(--vt-c-white);
   }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
 }
 
 body {
@@ -48,4 +41,17 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.animatio-fadein{
+  animation: fadeIn .3s ease-in-out forwards;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }100%{
+    opacity: 1;
+    transform: none;
+  }
 }
