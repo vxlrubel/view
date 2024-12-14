@@ -5,12 +5,10 @@
 </template>
 
 <style>
-@media (min-width: 1024px) {
   .about {
     min-height: calc(100dvh - var(--header-height));
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
-}
 </style>

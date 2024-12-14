@@ -1,6 +1,7 @@
 .header-area{
     height: var(--header-height);
     background-color: white;
+    animation: fadeIn .5s ease-in-out forwards;
 }
 .header-space{
     height: var(--header-height);

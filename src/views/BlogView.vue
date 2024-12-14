@@ -1,6 +1,6 @@
 <template>
   <div class="about animatio-fadein">
-    <h1 class="text-center">Home page</h1>
+    <h1 class="text-center">This is Blog page</h1>
   </div>
 </template>
 
