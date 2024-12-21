@@ -19,6 +19,7 @@ import { RouterLink, RouterView } from 'vue-router'
             <li><RouterLink to="/about">About</RouterLink></li>
             <li><RouterLink to="/blog">Blog</RouterLink></li>
             <li><RouterLink to="/contact">Contact</RouterLink></li>
+            <li><RouterLink to="/video">Video</RouterLink></li>
           </ul>
         </div>
         <div class="menu-last-item h-100 d-flex align-items-center">
