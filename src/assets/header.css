@@ -39,3 +39,15 @@
 .header-area img{
     max-width: 100%;
 }
+
+.mobile-menu{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: hsl(0, 0%, 100%);
+}
+
+.mobile-menu a.router-link-active.router-link-exact-active{
+    background-color: var(--bs-dark);
+    color: white !important;
+}
