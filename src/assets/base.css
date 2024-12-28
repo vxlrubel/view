@@ -1,5 +1,5 @@
 :root {
-  --hue: 352;
+  --hue: 342;
   --saturation: 81%;
   --lightness: 53%;
   --hue-2nd: 335;
@@ -63,4 +63,17 @@ body {
   }100%{
     opacity: 1;
   }
+}
+
+
+/* default classes modification1 */
+.btn-primary {
+	--bs-btn-bg: var(--color-primary);
+	--bs-btn-border-color: var(--color-primary);
+	--bs-btn-hover-bg: var(--color-secondary);
+	--bs-btn-hover-border-color: var(--color-secondary);
+	--bs-btn-active-bg: var(--color-secondary);
+	--bs-btn-active-border-color: var(--color-secondary);
+	--bs-btn-disabled-bg: var(--color-primary);
+	--bs-btn-disabled-border-color: var(--color-primary);
 }
