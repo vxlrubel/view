@@ -31,10 +31,12 @@
     transition: background-color 0.115s ease-in-out;
 }
 .menu a:hover{
-	background: hsla(153, 48%, 49%, 0.2);
+	background: hsl(var(--hue), var(--saturation), 75%);
+    color: white;
 }
 .menu a.router-link-active.router-link-exact-active {
-	background: hsla(153, 48%, 49%, 0.5);
+	background: var(--color-primary);
+    color: white;
 }
 .header-area img{
     max-width: 100%;
