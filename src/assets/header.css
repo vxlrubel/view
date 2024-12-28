@@ -8,18 +8,25 @@
 }
 .navigation-bar{
     --navigation-bar-gap: 1.5625rem;
-    --logo-width: 9.375rem;
+    --logo-width: 7.5rem;
+    --menu-last-item-width: 13.75rem;
     display: flex;
     gap: var(--navigation-bar-gap);
+}
+@media(width >= 992px){
+    .navigation-bar{
+        --menu-last-item-width: 8.5rem;
+    }
 }
 .logo{
     width: var(--logo-width);
 }
 .menu{
-    width: calc(100% - calc(calc(var(--logo-width) * 2) + calc(var(--navigation-bar-gap) * 2)));
+    width: calc(100% - calc(calc(var(--logo-width) + var(--menu-last-item-width)) + calc(var(--navigation-bar-gap) * 2)));
 }
 .menu-last-item{
-    width: var(--logo-width);
+    width: var(--menu-last-item-width);
+    gap: 1rem;
 }
 .menu a{
     display: inline-flex;
@@ -30,9 +37,10 @@
     color: var(--bs-dark);
     transition: background-color 0.115s ease-in-out;
 }
+.mobile-menu a:hover,
 .menu a:hover{
 	background: hsl(var(--hue), var(--saturation), 75%);
-    color: white;
+    color: white !important;
 }
 .menu a.router-link-active.router-link-exact-active {
 	background: var(--color-primary);
@@ -47,9 +55,13 @@
     left: 0;
     right: 0;
     background: hsl(0, 0%, 100%);
+    top: calc(100% + 2px);
 }
-
 .mobile-menu a.router-link-active.router-link-exact-active{
-    background-color: var(--bs-dark);
+    background-color: var(--color-primary);
     color: white !important;
+}
+.toggle-menu-button{
+    height: 38px;
+    width: 38px;
 }
