@@ -15,7 +15,7 @@
 }
 @media(width >= 992px){
     .navigation-bar{
-        --menu-last-item-width: 8.5rem;
+        --menu-last-item-width: 9rem;
     }
 }
 .logo{
