@@ -16,7 +16,10 @@
   --color-background: var(--vt-c-white);
   --color-text: var(--vt-c-black);
 }
-
+*::selection{
+  background-color: var(--color-primary);
+  color: white;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--vt-c-black);
