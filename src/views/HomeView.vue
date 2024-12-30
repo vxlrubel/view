@@ -1,14 +1,10 @@
 <template>
-  <div class="about animatio-fadein">
-    <h1 class="text-center">Home page</h1>
+  <div class="animatio-fadein">
+    <HereArea />
   </div>
 </template>
 
-<style>
-  .about {
-    min-height: calc(100dvh - var(--header-height));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-</style>
+
+<script setup>
+  import HereArea from '../components/HeroArea.vue'
+</script>
