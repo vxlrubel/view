@@ -1,5 +1,6 @@
 <script setup>
   import { RouterLink, RouterView } from 'vue-router'
+  import Footer from '@/components/Footer.vue'
   import { ref } from 'vue'
   let toggleMenu = ref( false );
 
@@ -23,7 +24,6 @@
             <li><RouterLink to="/about">About</RouterLink></li>
             <li><RouterLink to="/blog">Blog</RouterLink></li>
             <li><RouterLink to="/contact">Contact</RouterLink></li>
-            <li><RouterLink to="/video">Video</RouterLink></li>
           </ul>
         </div>
 
@@ -44,13 +44,12 @@
     <div class="mobile-menu shadow border-bottom d-lg-none" v-if="toggleMenu">
       <div class="container py-3">
         <ul class="m-0 p-0">
-          <li><RouterLink class="text-dark text-decoration-none py-1 d-block px-3" to="/">Home</RouterLink></li>
-          <li><RouterLink class="text-dark text-decoration-none py-1 d-block px-3" to="/services">Services</RouterLink></li>
-          <li><RouterLink class="text-dark text-decoration-none py-1 d-block px-3" to="/portfolio">Portfolio</RouterLink></li>
-          <li><RouterLink class="text-dark text-decoration-none py-1 d-block px-3" to="/about">About</RouterLink></li>
-          <li><RouterLink class="text-dark text-decoration-none py-1 d-block px-3" to="/blog">Blog</RouterLink></li>
-          <li><RouterLink class="text-dark text-decoration-none py-1 d-block px-3" to="/contact">Contact</RouterLink></li>
-          <li><RouterLink class="text-dark text-decoration-none py-1 d-block px-3" to="/video">Video</RouterLink></li>
+          <li><RouterLink class="text-dark text-decoration-none py-1 d-block px-3" to="/" @click.prevent="toggleMenu = !toggleMenu">Home</RouterLink></li>
+          <li><RouterLink class="text-dark text-decoration-none py-1 d-block px-3" to="/services" @click.prevent="toggleMenu = !toggleMenu">Services</RouterLink></li>
+          <li><RouterLink class="text-dark text-decoration-none py-1 d-block px-3" to="/portfolio" @click.prevent="toggleMenu = !toggleMenu">Portfolio</RouterLink></li>
+          <li><RouterLink class="text-dark text-decoration-none py-1 d-block px-3" to="/about" @click.prevent="toggleMenu = !toggleMenu">About</RouterLink></li>
+          <li><RouterLink class="text-dark text-decoration-none py-1 d-block px-3" to="/blog" @click.prevent="toggleMenu = !toggleMenu">Blog</RouterLink></li>
+          <li><RouterLink class="text-dark text-decoration-none py-1 d-block px-3" to="/contact" @click.prevent="toggleMenu = !toggleMenu">Contact</RouterLink></li>
         </ul>
       </div>
     </div>
@@ -60,32 +59,9 @@
   <RouterView />
 
 
-  <footer class="clearfix footer-area">
-    <div class="footer-top bg-light text-dark py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-lg-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, qui dignissimos voluptatem aperiam voluptate numquam quam consequatur repellat molestias, quisquam magni ipsum accusamus deleniti possimus.</p>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, qui dignissimos voluptatem aperiam voluptate numquam quam consequatur repellat molestias, quisquam magni ipsum accusamus deleniti possimus.</p>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, qui dignissimos voluptatem aperiam voluptate numquam quam consequatur repellat molestias, quisquam magni ipsum accusamus deleniti possimus.</p>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, qui dignissimos voluptatem aperiam voluptate numquam quam consequatur repellat molestias, quisquam magni ipsum accusamus deleniti possimus.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="copyright-area bg-white text-dark">
-      <div class="container">
-        <div class="text-center py-3">
-          &copy;Copyright 2025. All right reserved by <a href="javascript:void(0)">Rubel Mahmud</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+
+  <!-- footer section -->
+  <Footer />
+
 
 </template>
