@@ -2,9 +2,9 @@
   --hue: 267;
   --saturation: 70%;
   --lightness: 44%;
-  --hue-2nd: 335;
-  --saturation-2nd: 87%;
-  --lightness-2nd: 41%;
+  --hue-2nd: 267;
+  --saturation-2nd: 70%;
+  --lightness-2nd: 55%;
   --header-height: 3.125rem;
   --color-primary: hsl(var(--hue), var(--saturation), var(--lightness));
   --color-secondary: hsl(var(--hue-2nd), var(--saturation-2nd), var(--lightness-2nd));

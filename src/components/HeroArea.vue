@@ -1,3 +1,6 @@
+<script setup>
+  import { RouterLink } from 'vue-router'
+</script>
 
 <template>
   <section class="clearfix hero-area">
@@ -8,6 +11,18 @@
             <div class="hero-subtitle">Applications & Design</div>
         </div>
         <p class="hero-description">We specialize in creating innovative websites, powerful web applications, and stunning designs to bring your digital vision to life. Let us help you build a strong online presence that drives success.</p>
+
+        <div class="action-button mt-5">
+          <RouterLink to="/services" class="btn btn-primary d-inline-flex align-items-center gap-2 text-uppercase py-2 px-4 rounded-0">
+            <span>See All Services</span>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/>
+              </svg>
+            </span>
+          </RouterLink>
+        </div>
+
       </div>
     </div>
   </section>
@@ -61,6 +76,10 @@
     opacity: 0;
     animation: contentFadeIn var(--animation-time) forwards calc((var(--animation-time) * 2) / 1.8);
   }
+  .action-button{
+    opacity: 0;
+    animation: fadeInUpTitle var(--animation-time) forwards calc((var(--animation-time) * 3) / 2);
+  }
   @media(width < 992px){
     .hero-area{
       position: relative;
@@ -89,7 +108,7 @@
   @keyframes fadeInUpTitle {
     0%{
       opacity: 0;
-      transform: translateY(50px);
+      transform: translateY(25px);
     }100%{
       opacity: 1;
       transform: none;
