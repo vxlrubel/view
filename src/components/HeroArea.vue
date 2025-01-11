@@ -21,12 +21,13 @@
     background-size: cover;
     background-position: center;
     .container{
+      position: relative;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: flex-start;
       height: calc(100dvh - var(--header-height));
-
+      z-index: 2;
     }
   }
   .hero-content{
@@ -44,7 +45,7 @@
     animation: fadeInUpTitle var(--animation-time) forwards;
   }
   .hero-subtitle {
-    --font-size: 1.8rem;
+    --font-size: 1.7rem;
     font-size: var(--font-size);
     text-transform: uppercase;
     font-weight: 600;
@@ -61,9 +62,15 @@
     animation: contentFadeIn var(--animation-time) forwards calc((var(--animation-time) * 2) / 1.8);
   }
   @media(width < 992px){
-    .hero-description{
-      text-shadow: 1px 1px #a4a4a4;
-      backdrop-filter: blur(5px);
+    .hero-area{
+      position: relative;
+    }
+    .hero-area::after{
+      position: absolute;
+      inset: 0;
+      background-color: hsla(0, 0%, 100%, 0.3);
+      backdrop-filter: blur(2px);
+      z-index: 1;
     }
   }
   @media(width >= 768px){
@@ -71,9 +78,12 @@
       --title-font-size: 2.5rem;
     }
   }
-  @media(width >= 991px){
+  @media(width >= 992px){
     .hero-title{
       --title-font-size: 2.8rem;
+    }
+    .hero-subtitle {
+      --font-size: 2rem;
     }
   }
   @keyframes fadeInUpTitle {
