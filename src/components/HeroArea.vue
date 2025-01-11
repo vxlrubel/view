@@ -15,6 +15,7 @@
 
 <style scoped lang="scss">
   .hero-area{
+    --animation-time: 0.5s;
     background-image: url('../assets/img/hero-image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,6 +40,8 @@
     --title-font-size: 2.165rem;
     font-size: var(--title-font-size);
     text-shadow: 2px 3px 1px white;
+    opacity: 0;
+    animation: fadeInUpTitle var(--animation-time) forwards;
   }
   .hero-subtitle {
     --font-size: 1.8rem;
@@ -49,9 +52,13 @@
     background: linear-gradient(to right, var(--color-primary), #EC5E95);
     -webkit-background-clip: text;
     background-clip: text;
+    opacity: 0;
+    animation: fadeInUpTitle var(--animation-time) forwards calc((var(--animation-time) / 2));
   }
   .hero-description{
     font-size: 1.225rem;
+    opacity: 0;
+    animation: contentFadeIn var(--animation-time) forwards calc((var(--animation-time) * 2) / 1.8);
   }
   @media(width < 992px){
     .hero-description{
@@ -68,5 +75,17 @@
     .hero-title{
       --title-font-size: 2.8rem;
     }
+  }
+  @keyframes fadeInUpTitle {
+    0%{
+      opacity: 0;
+      transform: translateY(50px);
+    }100%{
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes contentFadeIn {
+    100%{opacity: 1;}
   }
 </style>
