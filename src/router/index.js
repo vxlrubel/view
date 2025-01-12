@@ -62,6 +62,12 @@ const router = createRouter({
       component: () => import('../views/policies/RefundPolicy.vue'),
       meta: { title: site_title('Refund Policy') },
     },
+    {
+      path: '/service-provision-policy',
+      name: 'service-provision-policy',
+      component: () => import('../views/policies/ServiceProvisionPolicy.vue'),
+      meta: { title: site_title('Service Provision Policy') },
+    },
   ],
 });
 
