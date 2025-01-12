@@ -56,6 +56,12 @@ const router = createRouter({
       component: () => import('../views/policies/TermsConditions.vue'),
       meta: { title: site_title('Terms Conditions') },
     },
+    {
+      path: '/refund-policy',
+      name: 'refund-policy',
+      component: () => import('../views/policies/RefundPolicy.vue'),
+      meta: { title: site_title('Refund Policy') },
+    },
   ],
 });
 
