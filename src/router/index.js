@@ -50,6 +50,12 @@ const router = createRouter({
       component: () => import('../views/policies/PrivacyPolicy.vue'),
       meta: { title: site_title('Privacy policy') },
     },
+    {
+      path: '/terms-conditions',
+      name: 'terms-conditions',
+      component: () => import('../views/policies/TermsConditions.vue'),
+      meta: { title: site_title('Terms Conditions') },
+    },
   ],
 });
 
