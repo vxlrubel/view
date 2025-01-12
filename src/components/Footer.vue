@@ -5,7 +5,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-lg-3">
-              <RouterLink to="/" class="footer-logo d-inline-block">
+              <RouterLink to="/" class="footer-logo d-inline-block user-select-none">
                 <img alt="Vue logo" class="img-fluid" src="@/assets/logo.svg" />
               </RouterLink>
               <hr>
@@ -17,7 +17,9 @@
               <SocialShare />
             </div>
             <div class="col-sm-6 col-lg-3">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, qui dignissimos voluptatem aperiam voluptate numquam quam consequatur repellat molestias, quisquam magni ipsum accusamus deleniti possimus.</p>
+              <h3 class="fs-4 text-capitalize user-select-none">Pages</h3>
+              <hr>
+              <FooterPageList />
             </div>
             <div class="col-sm-6 col-lg-3">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, qui dignissimos voluptatem aperiam voluptate numquam quam consequatur repellat molestias, quisquam magni ipsum accusamus deleniti possimus.</p>
@@ -42,6 +44,7 @@
 <script setup>
   import { RouterLink } from 'vue-router';
   import SocialShare from '@/components/SocialShare.vue'
+  import FooterPageList from '@/components/FooterPageList.vue'
 </script>
 
 <style lang="scss" scoped>
