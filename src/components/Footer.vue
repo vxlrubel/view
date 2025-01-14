@@ -27,7 +27,12 @@
               <FooterPolicy />
             </div>
             <div class="col-sm-6 col-lg-3">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, qui dignissimos voluptatem aperiam voluptate numquam quam consequatur repellat molestias, quisquam magni ipsum accusamus deleniti possimus.</p>
+              <h3 class="fs-4 text-capitalize user-select-none">Subscribe Us</h3>
+              <hr>
+              <p class="small text-italic">
+                Stay updated with the latest news, updates, and exclusive content. Subscribe to us and never miss out!
+              </p>
+              <Subscribe />
             </div>
           </div>
         </div>
@@ -48,6 +53,7 @@
   import SocialShare from '@/components/SocialShare.vue'
   import FooterPageList from '@/components/FooterPageList.vue'
   import FooterPolicy from '@/components/FooterPolicy.vue'
+  import Subscribe from '@/components/Subscribe.vue'
 </script>
 
 <style lang="scss" scoped>
