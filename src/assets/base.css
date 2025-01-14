@@ -53,6 +53,7 @@ body {
     opacity: 1;
   }
 }
+
 .btn-primary {
 	--bs-btn-bg: var(--color-primary);
 	--bs-btn-border-color: var(--color-primary);
@@ -65,4 +66,14 @@ body {
 }
 .text-primary {
 	color: var(--color-primary) !important;
+}
+
+.form-select:focus,
+.form-control:focus {
+  border-color: var(--color-primary);
+  background-color: hsl(var(--hue), var(--saturation), 97%);
+  box-shadow: 0 0 5px 0 var(--color-primary);
+}
+.bg-primary {
+  background-color: var(--color-primary) !important;
 }
