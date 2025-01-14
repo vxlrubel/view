@@ -12,3 +12,9 @@
 <script setup>
   import { RouterLink } from 'vue-router';
 </script>
+
+<style scoped lang="scss">
+  a:hover{
+    color: var(--color-primary) !important;
+  }
+</style>
