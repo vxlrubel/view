@@ -12,7 +12,7 @@
       <div class="navigation-bar h-100 align-items-center justify-content-between">
         <div class="logo">
           <RouterLink to="/">
-            <img alt="Vue logo" class="logo" src="@/assets/logo.svg" />
+            <img alt="Vue logo" class="logo" src="@/assets/img/logo-dark.webp" />
           </RouterLink>
         </div>
 
