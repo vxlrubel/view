@@ -6,7 +6,7 @@
           <div class="row">
             <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
               <RouterLink to="/" class="footer-logo d-inline-block user-select-none">
-                <img alt="Vue logo" class="img-fluid" src="@/assets/logo.svg" />
+                <img alt="Vue logo" class="img-fluid" src="@/assets/img/logo-dark.webp" />
               </RouterLink>
               <hr>
               <div class="mb-3">
