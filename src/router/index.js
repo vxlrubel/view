@@ -75,6 +75,12 @@ const router = createRouter({
       meta: { title: site_title('Cookie Policy') },
     }
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+    return { top: 0, behavior: 'smooth' };
+  },
 });
 
 router.beforeEach((to, from, next) => {
