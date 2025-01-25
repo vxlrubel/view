@@ -1,9 +1,5 @@
-<script setup>
-  import { RouterLink } from 'vue-router'
-</script>
-
 <template>
-  <section class="clearfix hero-area">
+  <section class="clearfix hero-area position-relative" ref="effectRefrence">
     <div class="container">
       <div class="hero-content">
         <div class="custom-line-height mb-3">
@@ -27,6 +23,54 @@
     </div>
   </section>
 </template>
+
+<script setup>
+  import { RouterLink } from 'vue-router'
+  import { ref, onMounted } from "vue";
+  import { characterCursor } from "cursor-effects";
+  const effectRefrence = ref(null);
+
+  onMounted(() => {
+    new characterCursor({
+      element: effectRefrence.value,
+      characters: ['✩', '✰', '☆', '⛧', '⛤', '✶', '☆', 'T', 'E', 'C', 'H', 's', 'p', 'a'],
+      font: "15px serif",
+      colors: [
+        "#843CDD",
+        "#4379F2",
+        "#E63870",
+        "#006BFF",
+        "#6C48C5",
+        "#EF5A6F",
+        "#615EFC",
+        "#FC4100",
+        "#D20062",
+        "#FF407D",
+        "#F4F27E",
+        "#ff0054",
+        "#7b2cbf",
+        "#e0aaff",
+      ],
+      characterLifeSpanFunction: () => Math.floor(Math.random() * 60 + 80),
+      initialCharacterVelocityFunction: () => ({
+        x: (Math.random() < 0.5 ? -1 : 1) * Math.random() * 5,
+        y: (Math.random() < 0.5 ? -1 : 1) * Math.random() * 5,
+      }),
+      characterVelocityChangeFunctions: {
+        x_func: (age, lifeSpan) => (Math.random() < 0.5 ? -1 : 1) / 30,
+        y_func: (age, lifeSpan) => (Math.random() < 0.5 ? -1 : 1) / 15,
+      },
+      characterScalingFunction: (age, lifeSpan) => {
+        let lifeLeft = lifeSpan - age;
+        return Math.max((lifeLeft / lifeSpan) * 2, 0);
+      },
+      characterNewRotationDegreesFunction: (age, lifeSpan) => {
+        let lifeLeft = lifeSpan - age;
+        return lifeLeft / 5;
+      },
+    });
+  });
+</script>
 
 <style scoped lang="scss">
   .hero-area{
