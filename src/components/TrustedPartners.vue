@@ -6,41 +6,21 @@
         <p class="mb-0 mx-auto sub-title">Empowering Innovation Together – Collaborating with Industry Leaders to Deliver Exceptional Tech Solutions.</p>
       </div>
 
-      <div class="css-image-slider">
-        <div class="items-1" style="--slide-items: 1">
-          <img src="./assets/img/slider/image-1.jpg" alt="slider image" class="slider-image">
-        </div>
-        <div class="items-2" style="--slide-items: 2">
-          <img src="./assets/img/slider/image-2.jpg" alt="slider image" class="slider-image">
-        </div>
-        <div class="items-3" style="--slide-items: 3">
-          <img src="./assets/img/slider/image-3.jpg" alt="slider image" class="slider-image">
-        </div>
-        <div class="items-4" style="--slide-items: 4">
-          <img src="./assets/img/slider/image-4.jpg" alt="slider image" class="slider-image">
-        </div>
-        <div class="items-5" style="--slide-items: 5">
-          <img src="./assets/img/slider/image-5.jpg" alt="slider image" class="slider-image">
-        </div>
-        <div class="items-6" style="--slide-items: 6">
-          <img src="./assets/img/slider/image-6.jpg" alt="slider image" class="slider-image">
-        </div>
-        <div class="items-7" style="--slide-items: 7">
-          <img src="./assets/img/slider/image-7.jpg" alt="slider image" class="slider-image">
-        </div>
-        <div class="items-8" style="--slide-items: 8">
-          <img src="./assets/img/slider/image-8.jpg" alt="slider image" class="slider-image">
+      <div class="css-image-slider user-select-none">
+        <div :class="`items-${partner.id}`" v-for="(partner, index) in partners" :key="index" :style="`--slide-items: ${partner.id}`">
+          <img :src="partner.src" :alt="partner.title" class="slider-image">
         </div>
       </div>
-
-
     </div>
   </div>
 </template>
 
 
 <script setup>
-  const partners = [
+
+import { ref } from 'vue';
+
+  const partners = ref([
     {
       id: 1,
       title: 'image 1',
@@ -81,7 +61,7 @@
       title: 'image 8',
       src: 'image-8.jpg'
     },
-  ];
+  ]);
 </script>
 
 
@@ -104,10 +84,13 @@
     max-width: 540px;
   }
 
-
   // animation
   .css-image-slider{
-    --item-height: 12.5rem;
+    --item-height: 6rem;
+    --total-item: 8;
+    --item-width: 15rem;
+    --border-radius: .5rem;
+    --animation_duration: 30s;
     position: relative;
     height: var(--item-height);
     overflow: hidden;
@@ -121,30 +104,27 @@
   }
 
   .css-image-slider [class*="items-"]{
-      --total-item: 8;
-      --item-width: 18.75rem;
-      --item-height: 12.5rem;
       position: absolute;
       width: var(--item-width);
       height: var(--item-height);
-      border-radius: 1.5rem;
+      border-radius: var(--border-radius);
       background: var(--theme);
       left: max(calc(var(--item-width) * var(--total-item)), 100%);
       animation-name: scroll-left;
-      animation-duration: 30s;
+      animation-duration: var(--animation_duration);
       animation-timing-function: linear;
       animation-iteration-count: infinite;
-      animation-delay: calc(30s / var(--total-item) * (var(--total-item) - var(--slide-items)) * -1);
-      -webkit-border-radius: 1.5rem;
-      -moz-border-radius: 1.5rem;
-      -ms-border-radius: 1.5rem;
-      -o-border-radius: 1.5rem;
+      animation-delay: calc(var(--animation_duration) / var(--total-item) * (var(--total-item) - var(--slide-items)) * -1);
+      -webkit-border-radius: var(--border-radius);
+      -moz-border-radius: var(--border-radius);
+      -ms-border-radius: var(--border-radius);
+      -o-border-radius: var(--border-radius);
   }
   .css-image-slider [class*="items-"]:nth-child(odd){
-      background: hsl(240, 100%, 90%);
+      background: hsl(var(--hue), var(--saturation), 70%);
   }
   .css-image-slider [class*="items-"]:nth-child(even){
-      background: hsl(240, 100%, 80%);
+      background: hsl(var(--hue), var(--saturation), 90%);
   }
 
   .css-image-slider:hover [class*="items-"]{
