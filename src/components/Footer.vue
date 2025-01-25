@@ -4,7 +4,7 @@
       <div class="footer-top text-dark py-5">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+            <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 text-center text-sm-start">
               <RouterLink to="/" class="footer-logo d-inline-block user-select-none">
                 <img alt="Vue logo" class="img-fluid" src="@/assets/img/logo-dark.webp" />
               </RouterLink>
@@ -17,19 +17,19 @@
               <SocialShare />
             </div>
             <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
-              <h3 class="fs-4 text-capitalize user-select-none">Pages</h3>
+              <h3 class="fs-4 text-capitalize user-select-none text-center text-sm-start">Pages</h3>
               <hr>
               <FooterPageList />
             </div>
             <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
-              <h3 class="fs-4 text-capitalize user-select-none">Policy Pages</h3>
+              <h3 class="fs-4 text-capitalize user-select-none text-center text-sm-start">Policy Pages</h3>
               <hr>
               <FooterPolicy />
             </div>
             <div class="col-sm-6 col-lg-3">
-              <h3 class="fs-4 text-capitalize user-select-none">Subscribe Us</h3>
+              <h3 class="fs-4 text-capitalize user-select-none text-center text-sm-start">Subscribe Us</h3>
               <hr>
-              <p class="small text-italic">
+              <p class="small text-italic text-center text-sm-start">
                 Stay updated with the latest news, updates, and exclusive content. Subscribe to us and never miss out!
               </p>
               <Subscribe />

@@ -1,5 +1,5 @@
 <template>
-  <ul class="list-unstyled p-0 m-0">
+  <ul class="list-unstyled p-0 m-0 text-center text-sm-start">
     <li><RouterLink to="/" class="text-decoration-none text-dark text-capitalize">Home</RouterLink></li>
     <li><RouterLink to="/services" class="text-decoration-none text-dark text-capitalize">services</RouterLink></li>
     <li><RouterLink to="/portfolio" class="text-decoration-none text-dark text-capitalize">portfolio</RouterLink></li>

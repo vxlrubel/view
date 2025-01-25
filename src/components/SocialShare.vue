@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex align-items-center gap-1">
+  <div class="d-flex align-items-center gap-1 justify-content-center justify-content-sm-start">
       <a href="javascript:void(0)" class="d-inline-flex align-items-center justify-content-center f_social-link">
         <Facebook />
       </a>

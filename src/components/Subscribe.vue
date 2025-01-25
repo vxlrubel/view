@@ -12,7 +12,7 @@
       />
     </div>
 
-    <div class="mt-2 d-flex align-items-center gap-3">
+    <div class="mt-2 d-flex align-items-center gap-3 justify-content-center justify-content-sm-start">
       <button
         type="submit"
         class="btn btn-primary rounded-0 px-3"
