@@ -3,6 +3,7 @@
     <HereArea />
     <WhatWedo />
     <TrustedPartners />
+    <Portfolio />
   </div>
 </template>
 
@@ -10,4 +11,5 @@
 import HereArea from '@/components/HeroArea.vue'
 import WhatWedo from '@/components/WhatWedo.vue'
 import TrustedPartners from '@/components/TrustedPartners.vue'
+import Portfolio from '@/components/Portfolio.vue';
 </script>
