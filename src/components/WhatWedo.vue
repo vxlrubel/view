@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <h3 class="text-uppercase fs-6 text-primary">What we do</h3>
+          <h3 class="text-uppercase fs-6 text-primary what-we-do">What we do</h3>
         </div>
         <div class="col-md-9">
           <h3 class="fs-1 text-uppercase mb-3">Discover the Range of Services We Offer to Transform Your Digital Presence and Drive Success</h3>
@@ -75,5 +75,9 @@
       box-shadow: 0px 48px 96px -24px rgba(0, 0, 0, 0.16);
       border-color: transparent !important;
     }
+  }
+  .what-we-do {
+      position: sticky;
+      top: var(--header-height);
   }
 </style>
