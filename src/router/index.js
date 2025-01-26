@@ -1,8 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue';
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
 
-const site_title = (pageTitle ='Test', mainTitle = 'Agency')=>{
-    return `${pageTitle} - ${mainTitle}`;
+const site_title = (pageTitle = 'Test', mainTitle = 'Agency') => {
+  return `${pageTitle} - ${mainTitle}`
 }
 
 const router = createRouter({
@@ -30,7 +30,7 @@ const router = createRouter({
       path: '/blog',
       name: 'Blog',
       component: () => import('../views/BlogView.vue'),
-      meta: { title: site_title('Blog')},
+      meta: { title: site_title('Blog') },
     },
     {
       path: '/contact',
@@ -73,19 +73,19 @@ const router = createRouter({
       name: 'cookie-policy',
       component: () => import('../views/policies/CookiePolicy.vue'),
       meta: { title: site_title('Cookie Policy') },
-    }
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition;
+      return savedPosition
     }
-    return { top: 0, behavior: 'smooth' };
+    return { top: 0, behavior: 'smooth' }
   },
-});
+})
 
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || 'My Vue App';
-  next();
-});
+  document.title = to.meta.title || 'My Vue App'
+  next()
+})
 
-export default router;
+export default router

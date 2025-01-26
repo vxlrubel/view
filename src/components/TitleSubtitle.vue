@@ -8,39 +8,39 @@
 </template>
 
 <script setup>
-  import { defineProps } from 'vue';
-  defineProps({
-    title: {
-      type: String,
-      required: true,
-    },
-    highlight: {
-      type: String,
-      required: false,
-    },
-    subtitle: {
-      type: String,
-      required: false,
-    },
-  });
+import { defineProps } from 'vue'
+defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+  highlight: {
+    type: String,
+    required: false,
+  },
+  subtitle: {
+    type: String,
+    required: false,
+  },
+})
 </script>
 
 <style scoped>
-.site-header-title{
-    --line-width: 9.375rem;
-    --line-height: 3px;
-    position: relative;
-    &::after{
-      position: absolute;
-      height: var(--line-height);
-      width: var(--line-width);
-      bottom: 0;
-      left: calc( 50% - calc(var(--line-width) / 2 ));
-      background-color: var(--color-primary);
-      content: '';
-    }
+.site-header-title {
+  --line-width: 9.375rem;
+  --line-height: 3px;
+  position: relative;
+  &::after {
+    position: absolute;
+    height: var(--line-height);
+    width: var(--line-width);
+    bottom: 0;
+    left: calc(50% - calc(var(--line-width) / 2));
+    background-color: var(--color-primary);
+    content: '';
   }
-  .sub-title{
-    max-width: 540px;
-  }
+}
+.sub-title {
+  max-width: 540px;
+}
 </style>

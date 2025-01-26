@@ -5,10 +5,10 @@
 </template>
 
 <style>
-  .about {
-    min-height: calc(100dvh - var(--header-height));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.about {
+  min-height: calc(100dvh - var(--header-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>
