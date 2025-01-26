@@ -1,10 +1,11 @@
 <template>
   <div class="clearfix partners-area bg-light py-4 py-lg-5">
     <div class="container">
-      <div class="text-center site-header-title pb-3 pb-lg-4 mb-3 mb-lg-4">
-        <h4 class="fs-4 text-uppercase">Our Trusted <span class="text-primary">Partners</span></h4>
-        <p class="mb-0 mx-auto sub-title">Empowering Innovation Together – Collaborating with Industry Leaders to Deliver Exceptional Tech Solutions.</p>
-      </div>
+      <TitleSubtitle
+        title="Our Trusted"
+        highlight="Partners"
+        subtitle="Empowering Innovation Together - Collaborating with Industry Leaders to Deliver Exceptional Tech Solutions."
+       />
 
       <div class="css-image-slider user-select-none">
         <div :class="`items-${partner.id}`" v-for="(partner, index) in partners" :key="index" :style="`--slide-items: ${partner.id}`">
@@ -19,6 +20,7 @@
 <script setup>
 
 import { ref } from 'vue';
+import TitleSubtitle from '@/components/TitleSubtitle.vue';
 
   const partners = ref([
     {
@@ -66,25 +68,6 @@ import { ref } from 'vue';
 
 
 <style scoped lang="scss">
-  .site-header-title{
-    --line-width: 9.375rem;
-    --line-height: 3px;
-    position: relative;
-    &::after{
-      position: absolute;
-      height: var(--line-height);
-      width: var(--line-width);
-      bottom: 0;
-      left: calc( 50% - calc(var(--line-width) / 2 ));
-      background-color: var(--color-primary);
-      content: '';
-    }
-  }
-  .sub-title{
-    max-width: 540px;
-  }
-
-  // animation
   .css-image-slider{
     --item-height: 6rem;
     --total-item: 8;
